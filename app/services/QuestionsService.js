@@ -5,6 +5,11 @@ import { triviaApi } from "./AxiosService.js";
 
 
 class QuestionsService {
+  async getHistoryQuestions() {
+    const response = await triviaApi.get('&category=23&type=boolean')
+    const arrayOfHistoryQuestions = response.data.results.map(q => new Question(q))
+    AppState.questions = arrayOfHistoryQuestions
+  }
   async getMovieQuestions() {
     const response = await triviaApi.get('&category=11&type=boolean')
     const arrayOfMovieQuestions = response.data.results.map(q => new Question(q))

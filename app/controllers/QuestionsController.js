@@ -64,6 +64,16 @@ export class QuestionsController {
   async getMovieQuestions() {
     try {
       await questionsService.getMovieQuestions()
+      Pop.success('Tom Cruise for 500 Alex?')
+    } catch (error) {
+      Pop.error(error)
+    }
+  }
+
+  async getHistoryQuestions() {
+    try {
+      await questionsService.getHistoryQuestions()
+      Pop.success('It was a while ago probably.')
     } catch (error) {
       Pop.error(error)
     }
