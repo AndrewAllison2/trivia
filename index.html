@@ -30,9 +30,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <!-- <button class="btn btn-danger text-light" onclick="app.QuestionsController.selectAnimals()">Animals</button> -->
+          <button class="btn btn-danger text-light m-2"
+            onclick="app.QuestionsController.getAnimalsQuestions()">Animals</button>
+          <button class="btn btn-info text-light m-2" onclick="app.QuestionsController.getGeneralQuestions()">General
+            Knowledge</button>
+          <button class="btn btn-warning text-light m-2" onclick="app.QuestionsController.getMovieQuestions()">Film and
+            Movies</button>
 
-          <button class="btn btn-success" onclick="app.QuestionsController.newQuestion()">New Question!</button>
+          <button class="btn btn-success m-2" onclick="app.QuestionsController.newQuestion()">New Question!</button>
           <!-- NAVLINKS -->
 
         </div>

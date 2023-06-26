@@ -43,6 +43,32 @@ export class QuestionsController {
     }
   }
 
+  async getAnimalsQuestions() {
+    try {
+      await questionsService.getAnimalsQuestions()
+      Pop.success('Animal questions coming at you!')
+    } catch (error) {
+      Pop.error(error)
+    }
+  }
+
+  async getGeneralQuestions() {
+    try {
+      await questionsService.getGeneralQuestions()
+      Pop.success('Do you know much about anything?')
+    } catch (error) {
+      Pop.error(error)
+    }
+  }
+
+  async getMovieQuestions() {
+    try {
+      await questionsService.getMovieQuestions()
+    } catch (error) {
+      Pop.error(error)
+    }
+  }
+
   newQuestion() {
     _getRandomQuestion()
     _drawQuestion()
